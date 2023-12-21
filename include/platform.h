@@ -31,6 +31,10 @@ extern "C" {
  * layer.
  */
 
+#define ACK_CHECK_EN 0x1
+#define ACK_VAL 0x0
+#define NACK_VAL 0x1
+
 typedef struct
 {
     /* To be filled with customer's platform. At least an I2C address/descriptor
@@ -40,6 +44,8 @@ typedef struct
     i2c_port_t port;
 
 } VL53L5CX_Platform;
+
+#define VL53L5CX_MAX_CLK_SPEED 1000000
 
 /*
  * @brief The macro below is used to define the number of target per zone sent
